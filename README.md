@@ -59,3 +59,23 @@ BaseType_t xSemaphoreGive(SemaphoreHandle_t xSemaphore);
 BaseType_t xSemaphoreGiveFromISR( SemaphoreHandle_t xSemaphore, <br>
         BaseType_t *pxHigherPriorityTaskWoken);
 
+<H4>Counting Semaphore</H4>
+used for 
+- Counting events
+- Resource management
+
+<H4>xSemaphoreCreateCounting()</H4>
+SemaphoreHandle_t xSemaphoreCreateCounting( <br>
+     UBaseType_t uxMaxCount, <br>
+      UBaseType_t uxInitialCount); <br>
+ <H4>Priority Inversion</H4>
+ Higher priority task waiting for a lower priority task inherently assumes <br>
+ the priority of the lower priority task.<br>
+ <H4>Deadlock</H4>
+ Deadlock occurs when two tasks cannot<br>
+ proceed because they are both waiting for a resource<br>
+ that is held by the other.<br>
+ <H4>Priority Inheritance</H4>
+ Temporarily raising the priority of the resource holder<br>
+ to the priority of the highest priority task waiting for the resource. <br>
+ 

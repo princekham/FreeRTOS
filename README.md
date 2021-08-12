@@ -45,3 +45,17 @@ TimerHandle_t xTimer,<br>
 TickType_t xNewTimerPeriodInTicks,<br>
 TickType_t xTicksToWait <br>
 );
+
+<H3>Semaphore</H3>
+<H4>xSemaphoreCreateBinary()</H4>
+SemaphoreHandle_t xSemaphoreCreateBinary( void); // to create binary semaphore <br>
+<H4>xSemaphoreTake()</H4>
+BaseType_t xSemaphoreTake ( <br>
+    SemaphoreHandle_t xSemaphore, <br>
+    TickType_t xTicksToWait); // သူ မရမချင်းစောင့်တဲ့ အချိန်လို့ နားလည်တယ်။<br>
+<H4>xSemaphoreGive</H4>
+BaseType_t xSemaphoreGive(SemaphoreHandle_t xSemaphore);
+<H4> xSemaphoreGiveFromISR() </Hr>
+BaseType_t xSemaphoreGiveFromISR( SemaphoreHandle_t xSemaphore, <br>
+        BaseType_t *pxHigherPriorityTaskWoken);
+

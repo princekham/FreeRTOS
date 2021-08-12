@@ -79,3 +79,9 @@ SemaphoreHandle_t xSemaphoreCreateCounting( <br>
  Temporarily raising the priority of the resource holder<br>
  to the priority of the highest priority task waiting for the resource. <br>
  
+ <H3>Gatekeeper</H3>
+ <H4> Using TICK_HOOK function </H4>
+ we need to go to FreeRTOSConfig.h <br>
+ and set #define configUSE_TICK_HOOK to 1 <br>
+ 
+ 

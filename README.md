@@ -93,15 +93,15 @@ SemaphoreHandle_t xSemaphoreCreateCounting( <br>
 
 void InterruptInit(void) 
 {
-  noInterrupts();
-  TCCR1A =0;
-  TCCR1B =0;
- timer1_counter = 34286;
+  noInterrupts(); // disable global interrupt <br>
+  TCCR1A =0; // <br>
+  TCCR1B =0; // <br>
+ timer1_counter = 34286; // <br>
 
- TCNT1  = timer1_counter;
- TCCR1B |= (1 << CS12); 
- TIMSK1 |= (1 << TOIE1);
- interrupts();
+ TCNT1  = timer1_counter; //preload the counter timer <br>
+  TCCR1B |= (1 << CS12);  // <br>
+ TIMSK1 |= (1 << TOIE1); // enable Timer overflower interupt
+ interrupts(); //enable global interrupt
   
 }
 

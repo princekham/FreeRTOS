@@ -84,4 +84,24 @@ SemaphoreHandle_t xSemaphoreCreateCounting( <br>
  we need to go to FreeRTOSConfig.h <br>
  and set #define configUSE_TICK_HOOK to 1 <br>
  
- 
+ - OS moves thread from Run State to Ready Stat
+-  Preemption is needed to guarantee fairness
+- Preemption needs a interrupts
+ - Preemption helps meet deadlines
+
+<H3>Interrupts on Arduino</H3>
+
+void InterruptInit(void) 
+{
+  noInterrupts();
+  TCCR1A =0;
+  TCCR1B =0;
+ timer1_counter = 34286;
+
+ TCNT1  = timer1_counter;
+ TCCR1B |= (1 << CS12); 
+ TIMSK1 |= (1 << TOIE1);
+ interrupts();
+  
+}
+

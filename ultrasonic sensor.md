@@ -6,6 +6,13 @@
 
 ### ESP 32 pin diagram
 
-![image](https://github.com/user-attachments/assets/108a501e-638d-4036-963d-982d525d00de)
+![image](https://github.com/user-attachments/assets/51ed61b2-b716-4201-ae7d-ad11ae392d6a)
 
-- 
+
+#### Pin Connection 
+
+Echo - D13 (GPIO13),
+
+Trigger - D12 (GPIO12),
+
+Vcc - Vin, (5 V) 

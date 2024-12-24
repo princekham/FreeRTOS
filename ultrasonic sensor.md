@@ -4,12 +4,13 @@
 
 - please see https://github.com/princekham/Tasmota/blob/main/Ultrasonic%20sensor.md
 
-### ESP 32 pin diagram
-
+### ESP 32 pin diagram  
+- (ref: https://lastminuteengineers.com/esp32-pinout-reference/)
+  
 ![image](https://github.com/user-attachments/assets/51ed61b2-b716-4201-ae7d-ad11ae392d6a)
 
 
-#### Pin Connection 
+#### Pin Connection
 
 Echo - D13 (GPIO13),
 
